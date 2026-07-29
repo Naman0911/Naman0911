@@ -1,16 +1,31 @@
-## Hi there 👋
+<div align="center">
 
-<!--
-**Naman0911/Naman0911** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# 👋 Hi, I'm Naman Upadhyay
 
-Here are some ideas to get you started:
+AI Engineer • Backend Developer • ML Enthusiast
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<br>
+
+<h3><code>naman@github:~$ ./contributions.sh</code></h3>
+
+<img src="./output/contrib-heatmap.svg" width="860">
+
+<br><br>
+
+<h3><code>naman@github:~$ whoami</code></h3>
+
+<table>
+<tr>
+
+<td valign="top">
+<img src="./output/avi-ascii.svg" width="360">
+</td>
+
+<td valign="top">
+<img src="./output/info-card.svg" width="500">
+</td>
+
+</tr>
+</table>
+
+</div>

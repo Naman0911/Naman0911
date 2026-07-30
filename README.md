@@ -1,8 +1,8 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="output/dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="output/light.svg">
-    <img alt="Naman's Animated Banner" src="output/dark.svg" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Naman0911/Naman0911/main/output/dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Naman0911/Naman0911/main/output/light.svg">
+    <img alt="Naman's Animated Banner" src="https://raw.githubusercontent.com/Naman0911/Naman0911/main/output/dark.svg" width="100%">
   </picture>
 </p>
 

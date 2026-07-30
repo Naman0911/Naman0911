@@ -16,8 +16,8 @@
 </p>
 
 <p align="center">
-  <!-- Streak Card (Demolab public instance) -->
-  <img src="https://streak-stats.demolab.com/?user=Naman0911&hide_border=true&background=0A101F&ring=10B981&fire=10B981&currStreakLabel=10B981&currStreakNum=22D3EE&sideNums=22D3EE&sideLabels=22D3EE&dates=A78BFA&stroke=0A101F" width="100%" alt="GitHub Streak" />
+  <!-- Streak Card (Self-hosted Vercel instance) -->
+  <img src="https://github-readme-streak-stats-liard-omega.vercel.app/?user=Naman0911&hide_border=true&background=0A101F&ring=10B981&fire=10B981&currStreakLabel=10B981&currStreakNum=22D3EE&sideNums=22D3EE&sideLabels=22D3EE&dates=A78BFA&stroke=0A101F" width="100%" alt="GitHub Streak" />
 </p>
 
 <p align="center">

@@ -10,19 +10,19 @@ def get_logo_points(logo_path, num_points=1000, scale=2.0, offset=(100, 100)):
     try:
         img = Image.open(logo_path).convert("RGBA")
         
-        # Create a white background and paste the image over it using the alpha channel as a mask
-        bg = Image.new("RGBA", img.size, (255, 255, 255, 255))
-        bg.paste(img, mask=img.split()[3] if 'A' in img.mode else None)
+        # Resize
+        img = img.resize((150, 150), Image.Resampling.LANCZOS)
         
-        # Convert to grayscale and resize
-        img = bg.convert("L").resize((150, 150), Image.Resampling.LANCZOS)
-        
-        # Invert so dark pixels become high values
-        img = ImageOps.invert(img)
         arr = np.array(img)
+        alpha = arr[:,:,3]
         
-        # Threshold to find dark pixels of the logo
-        y_idx, x_idx = np.where(arr > 128)
+        if np.any(alpha < 255): # Has meaningful transparency
+            y_idx, x_idx = np.where(alpha > 128)
+        else:
+            # Fallback for images without transparency
+            gray = np.array(img.convert("L"))
+            gray = np.invert(gray)
+            y_idx, x_idx = np.where(gray > 128)
         
         if len(y_idx) == 0:
             raise ValueError("No points found")

@@ -1,8 +1,8 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Naman0911/Naman0911/main/output/dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Naman0911/Naman0911/main/output/light.svg">
-    <img alt="Naman's Animated Banner" src="https://raw.githubusercontent.com/Naman0911/Naman0911/main/output/dark.svg" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="output/dark.svg?v=2">
+    <source media="(prefers-color-scheme: light)" srcset="output/light.svg?v=2">
+    <img alt="Naman's Animated Banner" src="output/dark.svg?v=2" width="100%">
   </picture>
 </p>
 
@@ -16,8 +16,8 @@
 </p>
 
 <p align="center">
-  <!-- Streak Card (Self-hosted Vercel instance) -->
-  <img src="https://github-readme-streak-stats-liard-omega.vercel.app/?user=Naman0911&hide_border=true&background=0A101F&ring=10B981&fire=10B981&currStreakLabel=10B981&currStreakNum=22D3EE&sideNums=22D3EE&sideLabels=22D3EE&dates=A78BFA&stroke=0A101F" width="100%" alt="GitHub Streak" />
+  <!-- Streak Card (Demolab public instance) -->
+  <img src="https://streak-stats.demolab.com/?user=Naman0911&hide_border=true&background=0A101F&ring=10B981&fire=10B981&currStreakLabel=10B981&currStreakNum=22D3EE&sideNums=22D3EE&sideLabels=22D3EE&dates=A78BFA&stroke=0A101F&v=2" width="100%" alt="GitHub Streak" />
 </p>
 
 <p align="center">

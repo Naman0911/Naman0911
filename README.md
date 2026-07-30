@@ -1,8 +1,8 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="output/dark.svg?v=4">
-    <source media="(prefers-color-scheme: light)" srcset="output/light.svg?v=4">
-    <img alt="Naman's Animated Banner" src="output/dark.svg?v=4" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="output/dark.svg?v=5">
+    <source media="(prefers-color-scheme: light)" srcset="output/light.svg?v=5">
+    <img alt="Naman's Animated Banner" src="output/dark.svg?v=5" width="100%">
   </picture>
 </p>
 
@@ -17,15 +17,15 @@
 
 <p align="center">
   <!-- Streak Card (Demolab public instance) -->
-  <img src="https://streak-stats.demolab.com/?user=Naman0911&hide_border=true&background=0A101F&ring=10B981&fire=10B981&currStreakLabel=10B981&currStreakNum=22D3EE&sideNums=22D3EE&sideLabels=22D3EE&dates=A78BFA&stroke=0A101F&v=2" width="100%" alt="GitHub Streak" />
+  <img src="https://streak-stats.demolab.com/?user=Naman0911&hide_border=false&border=A78BFA&background=0A101F&ring=10B981&fire=10B981&currStreakLabel=10B981&currStreakNum=22D3EE&sideNums=22D3EE&sideLabels=22D3EE&dates=A78BFA&stroke=0A101F&v=2" width="100%" alt="GitHub Streak" />
 </p>
 
 <p align="center">
   <!-- Stats Card (Self-hosted Vercel instance) -->
-  <img src="https://github-naman-readme-stats.vercel.app/api?username=Naman0911&show_icons=true&hide_border=true&bg_color=0A101F&title_color=10B981&text_color=22D3EE&icon_color=A78BFA&hide_rank=true" width="49%" alt="GitHub Stats" />
+  <img src="https://github-naman-readme-stats.vercel.app/api?username=Naman0911&show_icons=true&hide_border=false&border_color=A78BFA&bg_color=0A101F&title_color=10B981&text_color=22D3EE&icon_color=A78BFA&hide_rank=true" width="49%" alt="GitHub Stats" />
   
   <!-- Top Languages Card (Self-hosted Vercel instance) -->
-  <img src="https://github-naman-readme-stats.vercel.app/api/top-langs/?username=Naman0911&layout=compact&hide_border=true&bg_color=0A101F&title_color=10B981&text_color=22D3EE" width="49%" alt="Top Languages" />
+  <img src="https://github-naman-readme-stats.vercel.app/api/top-langs/?username=Naman0911&layout=compact&hide_border=false&border_color=A78BFA&bg_color=0A101F&title_color=10B981&text_color=22D3EE" width="49%" alt="Top Languages" />
 </p>
 
 <p align="center">

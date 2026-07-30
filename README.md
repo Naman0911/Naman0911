@@ -22,10 +22,10 @@
 
 <p align="center">
   <!-- Stats Card (Self-hosted Vercel instance) -->
-  <img src="https://github-naman-readme-stats-pwddc1096-naman-bade.vercel.app/api?username=Naman0911&show_icons=true&hide_border=true&bg_color=0A101F&title_color=10B981&text_color=22D3EE&icon_color=A78BFA&hide_rank=true" width="49%" alt="GitHub Stats" />
+  <img src="https://github-naman-readme-stats.vercel.app/api?username=Naman0911&show_icons=true&hide_border=true&bg_color=0A101F&title_color=10B981&text_color=22D3EE&icon_color=A78BFA&hide_rank=true" width="49%" alt="GitHub Stats" />
   
   <!-- Top Languages Card (Self-hosted Vercel instance) -->
-  <img src="https://github-naman-readme-stats-pwddc1096-naman-bade.vercel.app/api/top-langs/?username=Naman0911&layout=compact&hide_border=true&bg_color=0A101F&title_color=10B981&text_color=22D3EE" width="49%" alt="Top Languages" />
+  <img src="https://github-naman-readme-stats.vercel.app/api/top-langs/?username=Naman0911&layout=compact&hide_border=true&bg_color=0A101F&title_color=10B981&text_color=22D3EE" width="49%" alt="Top Languages" />
 </p>
 
 <p align="center">

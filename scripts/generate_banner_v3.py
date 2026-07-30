@@ -130,12 +130,16 @@ def generate_svg(dark_mode, dots_mask, logo_points_list, user_details):
         svg.append(f'<text x="800" y="{y_offset}" font-family="monospace" font-size="14" fill="{text_color}">{val}</text>')
         y_offset += 30
         
-    # Portrait
-    svg.append(f'<g fill="{portrait_color}" shape-rendering="crispEdges">')
+    # Portrait (Optimized to single path to reduce file size)
+    svg.append(f'<path fill="{portrait_color}" shape-rendering="crispEdges" d="')
     y_idx, x_idx = np.where(dots_mask)
+    
+    path_data = []
     for x, y in zip(x_idx, y_idx):
-        svg.append(f'<rect x="{x + 50}" y="{y + 50}" width="1" height="1" />')
-    svg.append('</g>')
+        path_data.append(f"M{x + 50} {y + 50}h1v1h-1z")
+    
+    svg.append("".join(path_data))
+    svg.append('" />')
     
     # Logo Travellers (simplified animation using CSS for demo)
     if logo_points_list:

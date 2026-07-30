@@ -144,21 +144,26 @@ class AsciiEngine:
     ----------
     edge_threshold : float
         Edge map strength above which we inject a structural character.
-        Range [0, 1].  0.25 is a good default (captures clear edges,
+        Range [0, 1].  0.28 is portrait default (captures clear edges,
         ignores subtle gradients that would look noisy as characters).
+        0.22 is landscape default (softer edges in terrain/sky).
     block_w, block_h : int
-        Pixel dimensions of each character cell.  These must match the
-        char dimensions you used in svg_renderer.py.
-        Default 4×7 is a good fit for most monospace fonts at 8px.
+        Pixel dimensions of each character cell.
+    ramp : str | None
+        Custom character ramp (dark-to-light). If None, uses RAMP_DARK_TO_LIGHT.
+        Landscape mode passes an extended ramp with extra light chars for skies.
     """
 
     def __init__(self,
                  edge_threshold: float = 0.28,
                  block_w: int = 4,
-                 block_h: int = 7):
+                 block_h: int = 7,
+                 ramp: str | None = None):
         self.edge_threshold = edge_threshold
         self.block_w = block_w
         self.block_h = block_h
+        self._ramp = ramp if ramp is not None else RAMP_DARK_TO_LIGHT
+        self._ramp_length = len(self._ramp)
 
     def convert(
         self,

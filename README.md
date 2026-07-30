@@ -1,8 +1,8 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="output/dark.svg?v=5">
-    <source media="(prefers-color-scheme: light)" srcset="output/light.svg?v=5">
-    <img alt="Naman's Animated Banner" src="output/dark.svg?v=5" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="output/dark.svg?v=6">
+    <source media="(prefers-color-scheme: light)" srcset="output/light.svg?v=6">
+    <img alt="Naman's Animated Banner" src="output/dark.svg?v=6" width="100%">
   </picture>
 </p>
 

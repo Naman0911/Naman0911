@@ -27,7 +27,7 @@ def process_photo(photo_path, dark_mode=True):
         img = img.crop((width//2 - min_dim//2, 0, width//2 + min_dim//2, min_dim))
         
         # Resize to grid
-        img = img.resize((300, 340), Image.Resampling.LANCZOS)
+        img = img.resize((100, 113), Image.Resampling.LANCZOS)
         
         # Contrast & Unsharp
         img = ImageOps.autocontrast(img, cutoff=1)
@@ -130,13 +130,16 @@ def generate_svg(dark_mode, dots_mask, logo_points_list, user_details):
         svg.append(f'<text x="800" y="{y_offset}" font-family="monospace" font-size="14" fill="{text_color}">{val}</text>')
         y_offset += 30
         
-    # Portrait (Optimized to single path to reduce file size)
+    # Portrait (Optimized: use 3x3 rects for larger, fewer elements)
+    scale_factor = 3  # Each dither pixel becomes 3x3 SVG pixels
     svg.append(f'<path fill="{portrait_color}" shape-rendering="crispEdges" d="')
     y_idx, x_idx = np.where(dots_mask)
     
     path_data = []
     for x, y in zip(x_idx, y_idx):
-        path_data.append(f"M{x + 50} {y + 50}h1v1h-1z")
+        sx = x * scale_factor + 50
+        sy = y * scale_factor + 50
+        path_data.append(f"M{sx} {sy}h{scale_factor}v{scale_factor}h-{scale_factor}z")
     
     svg.append("".join(path_data))
     svg.append('" />')
@@ -146,12 +149,10 @@ def generate_svg(dark_mode, dots_mask, logo_points_list, user_details):
         svg.append(f'<g fill="{chrome_color}" shape-rendering="crispEdges">')
         pts1, pts2, pts3 = logo_points_list
         for i in range(len(pts1)):
-            svg.append(f'''
-            <circle cx="{pts1[i,0]+800}" cy="{pts1[i,1]+400}" r="1">
-                <animate attributeName="cx" values="{pts1[i,0]+800};{pts2[i,0]+800};{pts3[i,0]+800};{pts1[i,0]+800}" dur="14.2s" repeatCount="indefinite" />
-                <animate attributeName="cy" values="{pts1[i,1]+400};{pts2[i,1]+400};{pts3[i,1]+400};{pts1[i,1]+400}" dur="14.2s" repeatCount="indefinite" />
-            </circle>
-            ''')
+            cx1, cy1 = round(pts1[i,0]+800,1), round(pts1[i,1]+400,1)
+            cx2, cy2 = round(pts2[i,0]+800,1), round(pts2[i,1]+400,1)
+            cx3, cy3 = round(pts3[i,0]+800,1), round(pts3[i,1]+400,1)
+            svg.append(f'<circle cx="{cx1}" cy="{cy1}" r="1.5"><animate attributeName="cx" values="{cx1};{cx2};{cx3};{cx1}" dur="14.2s" repeatCount="indefinite"/><animate attributeName="cy" values="{cy1};{cy2};{cy3};{cy1}" dur="14.2s" repeatCount="indefinite"/></circle>')
         svg.append('</g>')
         
     svg.append('</svg>')
@@ -188,7 +189,7 @@ def main():
     mask_light = floyd_steinberg_dither(img_light)
     
     print("--- Logos ---")
-    num_pts = 900
+    num_pts = 400
     pts1 = get_logo_points(logos[0], num_points=num_pts)
     pts2 = match_points(pts1, get_logo_points(logos[1], num_points=num_pts))
     pts3 = match_points(pts2, get_logo_points(logos[2], num_points=num_pts))
